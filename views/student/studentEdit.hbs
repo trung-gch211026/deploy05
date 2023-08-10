@@ -1,6 +1,6 @@
     <a class="btn btn-primary mt-3" href="/student">Back</a>
     <div class="container col-md-8 mt-3 mb-3">
-        <form action="/student/edit/{{ student._id }}" method="post">
+        <form action="/student/edit/{{ student._id }}" method="post" enctype="multipart/form-data">
             <h1 class="text text-danger">Edit student</h1>
             <div class="form-group">
                 <label class="h4 text text-success">Full name</label>

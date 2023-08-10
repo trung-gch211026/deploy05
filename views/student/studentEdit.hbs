@@ -1,0 +1,51 @@
+    <a class="btn btn-primary mt-3" href="/student">Back</a>
+    <div class="container col-md-8 mt-3 mb-3">
+        <form action="/student/edit/{{ student._id }}" method="post">
+            <h1 class="text text-danger">Edit student</h1>
+            <div class="form-group">
+                <label class="h4 text text-success">Full name</label>
+                <input class="form-control" type="text" name="name" value="{{ student.name }}">
+            </div>
+            <div class="form-group">
+                <label class="h4 text text-success">Birthday</label>
+                <input class="form-control" type="date" name="dob" value= "{{ student.formattedDob  }}"> 
+            </div>
+            <div class="form-group">
+                <label class="h4 text text-success">Gender</label>
+                <br>
+                     Male <input type="radio" name="gender" value="Male" {{ student.selectedMale }}>
+                     Female <input type="radio" name="gender" value="Female" {{ student.selectedFemale }}>
+            </div>
+            <div class="form-group">
+                <label class="h4 text text-success">Department</label>
+                <br>
+                    <select class="form-control" name="department">
+                        <option value="IT" {{ student.selectedIT }}>Computing</option>
+                        <option value="Business" {{ student.selectedBusiness }}>Business</option>
+                        <option value="Graphic Design" {{ student.selectedGraphicDesign }}>Graphic Design</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label class="h4 text text-success">Class</label>
+                <input class="form-control" type="text" name="class" value="{{ student.class }}">
+            </div>
+            <div class="form-group">
+                <label class="h4 text text-success">GPA</label>
+                <input class="form-control" type="text" name="gpa" value="{{ student.gpa }}">
+            </div>
+            <div class="form-group">
+                <label class="h4 text text-success">Student Year</label>
+                <input class="form-control" type="number" name="studentYear" min="1" max="4" value="{{ student.studentYear }}">
+            </div>
+            <div class="form-group">
+                <label class="h4 text text-success">Image</label>
+                <br>
+                <img src="/images/{{ student.image }} " width="120" height="120">
+                <input class="form-control" type="file" name="image">
+            </div>
+            <div class="form-group">
+                <input class="btn btn-primary" type="submit" value="Edit">
+            </div>
+        </form> 
+    </div>
+    

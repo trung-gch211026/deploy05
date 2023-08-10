@@ -1,0 +1,49 @@
+<a class="btn btn-primary mt-3" href="/student">Back</a>
+<div class="container col-md-8 mt-3 mb-3">
+    <form action="/student/add" method="post" enctype="multipart/form-data">
+        <h1 class="text text-danger">Add new student</h1>
+        <div class="form-group">
+            <label class="h4 text text-success">Full name</label>
+            <input class="form-control" type="text" name="name" required>
+        </div>
+        <div class="form-group">
+            <label class="h4 text text-success">Birthday</label>
+            <input class="form-control" type="date" name="dob" required>
+        </div>
+        <div class="form-group">
+            <label class="h4 text text-success">Gender</label>
+            <br>
+            {{!-- value is the data gonna save into db, eg: value = Nam then when you display gender field the data will be "Nam" --}}
+            Male<input type="radio" name="gender" value="Male">  
+            Female<input type="radio" name="gender" value="Female">
+        </div>
+        <div class="form-group">
+            <label class="h4 text text-success">Department</label>
+            <br>
+            <Select class="form-control" name="department">
+                <option value="IT">Computing</option>
+                <option value="Business">Business</option>
+                <option value="Graphic Design">Graphic Design</option>
+            </Select>
+        </div>
+        <div class="form-group">
+            <label class="h4 text text-success">Class</label>
+            <input class="form-control" type="text" name="class" required>
+        </div>
+        <div class="form-group">
+            <label class="h4 text text-success">GPA</label>
+            <input class="form-control" type="text" name="gpa" required>
+        </div>
+        <div class="form-group">
+            <label class="h4 text text-success">Student Year</label>
+            <input class="form-control" type="number" name="studentYear" required min="1" max="4">
+        </div>
+        <div class="form-group">
+            <label class="h4 text text-success">Image</label>
+            <input class="form-control" type="file" name="image" required>
+        </div>
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Add">
+        </div>
+    </form>
+</div>
